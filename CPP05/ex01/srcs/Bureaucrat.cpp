@@ -66,6 +66,18 @@ Bureaucrat::Bureaucrat(string name, int grade) : name(name)
         }
     }
 
+    void Bureaucrat::signForm(Form &form)
+    {
+	try
+	{
+		form.beSigned(*this);
+		cout << _name << " signed " << form.get_name() << endl;
+	}
+	catch(const std::exception& e)
+	{
+		cout << _name << " couldn't sign " << form.get_name() << " because " << e.what() << endl; 
+	}
+}
     string Bureaucrat::get_name() const
     {
         return name;
