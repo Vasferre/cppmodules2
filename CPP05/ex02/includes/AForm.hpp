@@ -17,7 +17,7 @@ class AForm
         AForm();
         AForm(const AForm &copy);
         AForm(string name, string targer, int grade, int exec_grade);
-        ~AForm();
+        virtual ~AForm();
 
         AForm & operator=(const AForm &assign);
 
