@@ -13,7 +13,7 @@ Bureaucrat::Bureaucrat(string name, int grade) : name(name)
             throw Bureaucrat::GradeTooHighException();
         if (grade > 150)
             throw Bureaucrat::GradeTooLowException();
-        grade = grade;
+        this->grade = grade;
         std::cout << "Fields Constructor called of Bureaucrat" << std::endl;
     }
     catch (const std::exception &e)
